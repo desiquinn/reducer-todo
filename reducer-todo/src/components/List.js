@@ -6,10 +6,15 @@ const List = (props) => {
 
     return (
         <div>
-            <p>This is where my ToDo List Items will Go!</p>
-            {props.todoList.map((item)=> {
-                return <p key={item.id}>{item.item}</p>
-            })}
+            {props.todoList.map((item)=> (
+                <div key={item.id}
+                    className={`item${item.completed ? ' completed' : ''}`}
+                    onClick={ () => props.toggleItem(item) }
+                >
+                {item.item}
+                </div>
+            ))}
+            <button onClick={ () => props.clearCompleted} > Clear Completed </button>
         </div>
     )
 };

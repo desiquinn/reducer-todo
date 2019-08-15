@@ -12,19 +12,16 @@ const Form = (props) => {
         setItem(event.target.value);
     };
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     console.log(props)
-    //     console.log("What New Item?:", state.item)
-    //    props.addTask(state.item)
-    //     setState({
-    //        item: ""
-    //     })
-    // }
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(props);
+        props.addToDo(item);
+        setItem("");
+    };
 
  
     return (
-        <form >
+        <form onSubmit={handleSubmit}>
             <input 
                 type='text'
                 name='item'

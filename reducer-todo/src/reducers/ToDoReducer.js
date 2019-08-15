@@ -5,6 +5,11 @@
 // that our application needs to funtion.  It's easier to just add another key, than
 // adding to an array. Its able to represent different types of data.  State is an object.
 
+
+//ADD_TODO
+//CLEAR_COMPLETED
+
+
 export const initialState = {
     todoList: [
         {
