@@ -1,6 +1,7 @@
 import React, {useReducer} from 'react';
 import {initialState, TodoReducer} from './reducers/ToDoReducer.js'
 import List from './components/List.js';
+import Form from './components/Form.js';
 
 import './App.css';
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <h1>Desiree's Reducer ToDo List</h1>
+      <Form />
       <List todoList={state.todoList} />
     </div>
   );
